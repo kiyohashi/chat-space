@@ -42,8 +42,6 @@ Things you may want to cover:
 |name|string|null: false|
 |email|string|null: false|
 |password|string|null: false|
-|group_id|integer|null: false, foreign_key: true|
-|message_id|integer|null: false, foreign_key: true|
 
 ### Association
 - has_many :groups through: users_groups
