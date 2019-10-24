@@ -118,6 +118,7 @@ html {
             font-size: 16px;
             font-weight: bold;
             color: #434A54;
+            margin-right: 10px;
           }
           &__date {
             font-size: 12px;
@@ -142,9 +143,7 @@ html {
       .new_message {
         
         padding: 0  40px;
-        // width: 100%;
         display: flex;
-        // line-height: 90px;
         .input-box {
           position: relative;
           line-height: 90px;
@@ -154,9 +153,10 @@ html {
             height: 50px;
             width: 100%;
             padding-left: 10px;
+            font-size: 16px;
+            color: #434A54;
           }
           &__text::placeholder {
-            // padding: 0 10px;
             font-size: 16px;
             color: #434A54;
           }

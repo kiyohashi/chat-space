@@ -6,15 +6,12 @@
           test-user
         %ul.side-header__box__menu
           %li.side-header__box__menu__new-groups
-            -# newgroup
             %a
               %i.fa.fa-edit
           %li.side-header__box__menu__edit-user
-            -# edituser
             %a
               %i.fa.fa-cog
     .groups
-      -# groupsmessages
       %a
         .group
           %p.group__group-name
@@ -42,12 +39,10 @@
           Menber：
           %li.main-header__left-box__member-list__menber
             test-user
-      -# editgroup
       %a
         .main-header__edit-btn
           Edit
     .messages
-      -# #id
       .message
         .message__upper-info
           %p.message__upper-info__taker
@@ -56,8 +51,6 @@
             2019/02/13(WED)17:50:36
         %p.message__text
           こんにちは！
-
-      -# #id
       .message
         .message__upper-info
           %p.message__upper-info__taker
@@ -69,13 +62,9 @@
 
     .form
       %form#new_message.new_message
-        -# %input
-        -# %input
         .input-box
-          %input#message_content.input-box__text{:placeholder => "type a message", :name => "message[content]", :type => "text",}
+          %input#message_content.input-box__text{placeholder: "type a message", name: "message[content]", type: "text"}
           %label.input-box__image
             %i.fa.fa-image
-            -# %input#message_image.input-box__image__file
-        %input.submit-btn{:type => "submit", :name => "commit", :value =>"Send",}
-        -#  :data-disable-with => "Send"
+        %input.submit-btn{type: "submit", name: "commit", value: "Send"}
 
