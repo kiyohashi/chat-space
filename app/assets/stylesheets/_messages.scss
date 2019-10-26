@@ -99,16 +99,20 @@ html {
           }
         }
       }
-      a {
+        
+      .main-header__edit-btn {
         float: right;
-        .main-header__edit-btn {
+        height: 40px;
+        line-height: 40px;
+        margin-top: 28px;
+        a {
+          display: block;
+          height: 40px;
           border: solid 1px #38aef0;
           color:#38aef0;
-          height: 40px;
-          line-height: 40px;
           padding-left: 20px;
           padding-right: 20px;
-          margin-top: 28px;
+          text-decoration: none;
         }
       }
     }
