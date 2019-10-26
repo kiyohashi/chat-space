@@ -1,0 +1,60 @@
+.wrapper
+  = render 'shared/side_bar'
+  -# .chat-side
+  -#   .side-header
+  -#     .side-header__box
+  -#       %h3.side-header__box__user-name
+  -#         = current_user.name
+  -#       %ul.side-header__box__menu
+  -#         %li.side-header__box__menu__new-groups
+  -#           = link_to new_group_path do
+  -#             = fa_icon 'pencil-square-o', class: 'icon'
+  -#         %li.side-header__box__menu__edit-user
+  -#           = link_to edit_user_path(current_user) do
+  -#             = fa_icon 'cog', class: 'icon'
+  -#   .groups
+  -#     - current_user.groups.each do |group|
+  -#       .group
+              -# = link_to group_messages_path(group) do
+  -#           .group__name
+  -#             = group.name
+  -#           .group__message
+  -#             メッセージはまだありません。
+  .chat-main
+    .main-header
+      .main-header__left-box
+        %h2.main-header__left-box__current-group
+          test-group
+        %ul.main-header__left-box__menber-list
+          Menber：
+          %li.main-header__left-box__member-list__menber
+            test-user
+      %a
+        .main-header__edit-btn
+          Edit
+    .messages
+      .message
+        .message__upper-info
+          %p.message__upper-info__taker
+            test-user
+          %p.message__upper-info__date
+            2019/02/13(WED)17:50:36
+        %p.message__text
+          こんにちは！
+      .message
+        .message__upper-info
+          %p.message__upper-info__taker
+            test-user
+          %p.message__upper-info__date
+            2019/02/13(WED)17:50:42
+        %p.message__text
+          さようなら！
+
+    .form
+      %form#new_message.new_message
+        .input-box
+          %input#message_content.input-box__text{placeholder: "type a message", name: "message[content]", type: "text"}
+          %label.input-box__image
+            %i.fa.fa-image
+        %input.submit-btn{type: "submit", name: "commit", value: "Send"}
+
