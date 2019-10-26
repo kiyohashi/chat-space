@@ -9,9 +9,8 @@
           Menber：
           %li.main-header__left-box__member-list__menber
             test-user
-      %a
-        .main-header__edit-btn
-          Edit
+      .main-header__edit-btn
+        = link_to "Edit", edit_group_path(current_user)
     .messages
       .message
         .message__upper-info
@@ -29,7 +28,6 @@
             2019/02/13(WED)17:50:42
         %p.message__text
           さようなら！
-
     .form
       %form#new_message.new_message
         .input-box
@@ -37,4 +35,3 @@
           %label.input-box__image
             %i.fa.fa-image
         %input.submit-btn{type: "submit", name: "commit", value: "Send"}
-
