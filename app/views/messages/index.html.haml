@@ -9,9 +9,8 @@
           Menber：
           %li.main-header__left-box__member-list__menber
             test-user
-      %a
-        .main-header__edit-btn
-          Edit
+      .main-header__edit-btn
+        = link_to "Edit", edit_group_path(current_user)
     .messages
       = render @messages
     .form
@@ -22,4 +21,3 @@
             = fa_icon 'picture-o', class: 'icon'
             = f.file_field :image, class: 'hidden'
         = f.submit 'Send', class: 'submit-btn'
-
