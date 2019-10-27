@@ -12,26 +12,12 @@
       .main-header__edit-btn
         = link_to "Edit", edit_group_path(current_user)
     .messages
-      .message
-        .message__upper-info
-          %p.message__upper-info__taker
-            test-user
-          %p.message__upper-info__date
-            2019/02/13(WED)17:50:36
-        %p.message__text
-          こんにちは！
-      .message
-        .message__upper-info
-          %p.message__upper-info__taker
-            test-user
-          %p.message__upper-info__date
-            2019/02/13(WED)17:50:42
-        %p.message__text
-          さようなら！
+      = render @messages
     .form
-      %form#new_message.new_message
-        .input-box
-          %input#message_content.input-box__text{placeholder: "type a message", name: "message[content]", type: "text"}
-          %label.input-box__image
-            %i.fa.fa-image
-        %input.submit-btn{type: "submit", name: "commit", value: "Send"}
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+        .form__mask
+          = f.label :image, class: 'form__mask__image' do
+            = fa_icon 'picture-o', class: 'icon'
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'submit-btn'

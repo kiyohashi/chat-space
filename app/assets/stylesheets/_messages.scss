@@ -117,7 +117,7 @@ html {
       }
     }
     .messages{
-      height: calc(100% - 92px);
+      height: calc(100% - 102px);
       background-color: #fafafa;
       padding: 0 40px;
       .message{
@@ -149,31 +149,43 @@ html {
       position: fixed;
       bottom: 0;
       right: 0;
-      
-      .new_message {
-        
+      form {
         padding: 0  40px;
         display: flex;
-        .input-box {
-          position: relative;
-          line-height: 90px;
-          margin-right: 15px;
+        line-height: 90px;
+        position: relative;
+        .form__message {
+          height: 50px;
           width: 100%;
-          &__text {
-            height: 50px;
-            width: 100%;
-            padding-left: 10px;
-            font-size: 16px;
-            color: #434A54;
-          }
-          &__text::placeholder {
-            font-size: 16px;
-            color: #434A54;
-          }
+          padding-left: 10px;
+          margin: 18px 0px;
+          font-size: 16px;
+          color: #434A54;
+        }
+        .form__mask{
+          position: absolute;
+          right: 160px;
+          top: 38px;
           &__image {
-            position: absolute;
-            top: 0;
-            right: 0px;
+            position: relative;
+            line-height: 90px;
+            width:100%;
+            .icon {
+              position: absolute;
+              top: 0;
+              right: 0px;
+              width: 100%;
+              height: 100%;
+            }
+            .hidden {
+              // opacity: 0.01;
+              // width: 100%;
+              // height:
+              // position: absolute;
+              // top: 0;
+              // right: 0px;
+              display: none;
+            }
           }
         }
         .submit-btn {
@@ -185,7 +197,7 @@ html {
           float: right;
           margin-left: 15px;
         }  
-      }  
+      }
     }
   }
 }
