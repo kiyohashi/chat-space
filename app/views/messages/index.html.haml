@@ -10,7 +10,7 @@
           %li.main-header__left-box__member-list__menber
             test-user
       .main-header__edit-btn
-        = link_to "Edit", edit_group_path(current_user)
+        = link_to "Edit", edit_group_path(@group)
     .messages
       = render @messages
     .form
