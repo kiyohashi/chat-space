@@ -1,15 +1,17 @@
 
 html {
   height:100%;
+  width: 100%;
   body {
     height: 100%;
+    width: 100%;
   }
 }
 
 .wrapper {
   display: flex;
   height:100%;
-
+  width: 100%;
   .chat-side {
     height: 100%;
     width: 300px;
@@ -83,11 +85,10 @@ html {
       display: flex;
       padding: 0 40px;
       border-bottom: solid 1px #eeeeee;
-      width: 100%;
+      width: calc(100% - 300px);
       position: fixed;
       left: 300px;
       background-color: #fff;
-      overflow: scroll;
       &__left-box {
         display: inline-block;
         &__current-group {
@@ -109,8 +110,10 @@ html {
       .main-header__edit-btn {
         height: 40px;
         line-height: 40px;
+        float: right;
         position: absolute;
         top:28px;
+        right: 120px;
         a {
           display: block;
           height: 40px;
@@ -186,12 +189,6 @@ html {
               height: 100%;
             }
             .hidden {
-              // opacity: 0.01;
-              // width: 100%;
-              // height:
-              // position: absolute;
-              // top: 0;
-              // right: 0px;
               display: none;
             }
           }
