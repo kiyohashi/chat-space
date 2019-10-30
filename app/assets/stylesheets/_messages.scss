@@ -130,6 +130,7 @@ html {
       background-color: #fafafa;
       padding: 0 40px;
       margin-top: 102px;
+      overflow: auto;
       overflow: scroll;
       .message{
         &__upper-info {
