@@ -4,11 +4,13 @@
     .main-header
       .main-header__left-box
         %h2.main-header__left-box__current-group
-          test-group
+          = @group.name
         %ul.main-header__left-box__menber-list
           Menber：
           %li.main-header__left-box__member-list__menber
-            test-user
+            -# = @messages.user
+            - @group.users.each do |user|
+              = user.name
       .main-header__edit-btn
         = link_to "Edit", edit_group_path(@group)
     .messages

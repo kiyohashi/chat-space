@@ -102,6 +102,12 @@ li {
     }
     &--remove {
       color: #f05050;
+      float: right;
     }
+  }
+  &__button{
+    color: #f05050;
+    float: right;
+    cursor: pointer;
   }
 }
