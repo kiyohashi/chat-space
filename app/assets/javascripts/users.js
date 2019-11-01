@@ -32,7 +32,6 @@ $(function() {
   }
   $("#user-search-field").on("keyup", function() {
     let input = $("#user-search-field").val();
-    // console.log(input);
     $.ajax({
       type: "GET",
       url: "/users",
@@ -40,7 +39,6 @@ $(function() {
       dataType: "json"
     })
       .done(function(users) {
-        console.log("成功です")
         $("#user-search-result").empty();
 
         if (users.length !== 0) {
