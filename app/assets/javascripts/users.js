@@ -52,7 +52,6 @@ $(function() {
         }
       })
       .fail(function() {
-        console.log("失敗です")
         alert("通信エラーです。ユーザーが表示できません。");
       });
   });
